@@ -20,14 +20,9 @@ function App() {
   const search = (e) => {
     if (e.key === "Enter") {
       fetch(`${keys.BASE_URL}weather?q=${query}&units=metric&APPID=${keys.API_KEY}`)
-        .then((res) => {
-          if (res.status === 200)
-            res.json()
-          else
-            res = {}
-        })
+        .then((res) =>  res.json())
         .then((result) => {
-          if (result !== undefined) {
+          if (result.cod == 200) {
             setQuery("");
             setWeather(result);
           } else {
