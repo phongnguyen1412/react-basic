@@ -1,6 +1,5 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
-
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@
   }
   
   main {
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
     padding: 25px;
   }
   
@@ -114,3 +113,19 @@
     text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
   }
   
+
+  .notfound{
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  header{
+      background-color: #106f68;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px;
+      text-align: center;
+  }
