@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import keys from './config'
 
@@ -22,7 +21,7 @@ function App() {
       fetch(`${keys.BASE_URL}weather?q=${query}&units=metric&APPID=${keys.API_KEY}`)
         .then((res) =>  res.json())
         .then((result) => {
-          if (result.cod == 200) {
+          if (result.cod === 200) {
             setQuery("");
             setWeather(result);
           } else {
